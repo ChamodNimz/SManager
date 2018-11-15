@@ -94,7 +94,12 @@ router.route('/user/:id')
     
     // Delete user 
     .delete(function(req,res){
-        res.send({messge:'delete one user'+req.params.id})
+        User.deleteOne({_id:req.params.id},function(err){
+            if(!err){
+                res.send('user deleted ');
+            }
+
+        });
     })
    
 
