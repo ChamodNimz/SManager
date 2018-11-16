@@ -26,12 +26,13 @@ app.set('views',path.join(__dirname,'client/dist'));
 app.set('view engine', 'ejs');
 app.engine('html',require('ejs').renderFile);
 
+
 // Set statis folder for angular  files
 app.use(express.static(path.join(__dirname,'client/dist')));
 
 // Body Parser Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/',index); // serve index page
 app.use('/web',api); // api calls

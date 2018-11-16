@@ -21,19 +21,19 @@ require('../models/Login');
 const Login = mongoose.model('login');
 
 
-// Create users
-router.post('/api/users',function(req,res,next){
+// // Create users
+// router.post('/api/users',function(req,res,next){
 
-  // Giving schema values
-  var login =  new Login({
+//   // Giving schema values
+//   var login =  new Login({
                     
-    status:"1",
-    username: "Jhon",
-    password: "Snow",
-    group_id: "24",
-    role_id: "5"
+//     status:"1",
+//     username: "Jhon",
+//     password: "Snow",
+//     group_id: "24",
+//     role_id: "5"
 
-});
+// });
     // Save to DB
     // login.save(function(err,data){
     //     console.log(data);

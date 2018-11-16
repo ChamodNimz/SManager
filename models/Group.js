@@ -14,7 +14,7 @@ const GroupSchema = Schema({
     },
     suffix:{
         type: String,
-        required: true
+        required: false
     }
 
 });
